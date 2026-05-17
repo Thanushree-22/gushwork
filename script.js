@@ -86,3 +86,75 @@ faqItems.forEach(item => {
   });
 
 });
+
+const modal =
+document.getElementById("datasheetModal");
+
+const openBtn =
+document.querySelector(".datasheet-btn");
+
+const closeBtn =
+document.getElementById("closeModal");
+
+
+openBtn.addEventListener("click", () => {
+
+  modal.classList.add("show");
+
+});
+
+
+closeBtn.addEventListener("click", () => {
+
+  modal.classList.remove("show");
+
+});
+
+
+window.addEventListener("click", (e) => {
+
+  if(e.target === modal){
+
+    modal.classList.remove("show");
+
+  }
+
+});
+
+const quoteModal =
+document.getElementById("quoteModal");
+
+const quoteButtons =
+document.querySelectorAll(".quote-btn, .feature-btn");
+
+const closeQuoteBtn =
+document.getElementById("closeQuoteModal");
+
+
+quoteButtons.forEach((btn) => {
+
+  btn.addEventListener("click", () => {
+
+    quoteModal.classList.add("show");
+
+  });
+
+});
+
+
+closeQuoteBtn.addEventListener("click", () => {
+
+  quoteModal.classList.remove("show");
+
+});
+
+
+window.addEventListener("click", (e) => {
+
+  if(e.target === quoteModal){
+
+    quoteModal.classList.remove("show");
+
+  }
+
+});
